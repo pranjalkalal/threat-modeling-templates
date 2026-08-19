@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<KnowledgeBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Manifest name="Medical Device Model - Community Contributed" id="cc62ebae-3748-431e-b1df-f4220dc9003f" version="4.1.0.417" author="GEHC PDS Team" />
+  <ThreatMetaData>
+    <IsPriorityUsed>true</IsPriorityUsed>
+    <IsStatusUsed>true</IsStatusUsed>
+    <PropertiesMetaData>
+      <ThreatMetaDatum>
+        <Name>Title</Name>
+        <Label>Title</Label>
+        <HideFromUI>false</HideFromUI>
+        <Values>
+          <Value />
+        </Values>
+        <Id>ac0f9ea8-3b39-4ce9-bac2-6787124d7b48</Id>
+        <AttributeType>0</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>UserThreatCategory</Name>
+        <Label>Category</Label>
+        <HideFromUI>false</HideFromUI>
+        <AttributeType>0</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>UserThreatShortDescription</Name>
+        <Label>Short Description</Label>
+        <HideFromUI>true</HideFromUI>
+        <Values>
+          <Value>Spoofing is when a process or entity is something other than its claimed identity. Examples include substituting a process, a file, website or a network address.</Value>
+          <Value>Tampering is the act of altering the bits. Tampering with a process involves changing bits in the running process. Similarly, Tampering with a data flow involves changing bits on the network.</Value>
+          <Value>Repudiation threats involve an adversary denying that something happened.</Value>
+          <Value>Information disclosure happens when the information can be read by an unauthorized party.</Value>
+          <Value>Denial of Service happens when the process or a datastore is not able to service incoming requests or perform up to spec.</Value>
+          <Value>A user subject gains increased capability or privilege by taking advantage of an implementation bug.</Value>
+          <Value>Abuse is when a legitimate user violates the terms of use for the system without violating a system security policy.</Value>
+        </Values>
+        <Id>5d3b996b-aed5-4d95-8cf6-617bb67bf042</Id>
+        <AttributeType>1</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>UserThreatDescription</Name>
+        <Label>Description</Label>
+        <HideFromUI>false</HideFromUI>
+        <Values>
+          <Value />
+        </Values>
+        <Id>cf377f97-9dea-42d6-ae63-b097c4a8ec4d</Id>
+        <AttributeType>0</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>StateInformation</Name>
+        <Label>Justification</Label>
+        <HideFromUI>false</HideFromUI>
+        <Values>
+          <Value />
+        </Values>
+        <Id>0406a684-e06e-4643-ba21-0f63104d9131</Id>
+        <AttributeType>0</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>InteractionString</Name>
+        <Label>Interaction</Label>
+        <HideFromUI>false</HideFromUI>
+        <Id>d64f8926-f09d-4d67-a86f-fb4ad5036451</Id>
+        <AttributeType>0</AttributeType>
+      </ThreatMetaDatum>
+      <ThreatMetaDatum>
+        <Name>Priority</Name>
+        <Label>Priority</Label>
+        <HideFromUI>false</HideFromUI>
+        <Values>
+          <Value>High</Value>
+          <Value>Medium</Value>
+          <Value>Low</Value>
+        </Values>
+        <Description>Priority</Description>
+        <Id>bc9c6e2a-15d0-4863-9cac-589e51e4ca1e</Id>
+        <AttributeType>1</AttributeType>
+      </ThreatMetaDatum>
+    </PropertiesMetaData>
+  </ThreatMetaData>
+  <GenericElements>
+    <ElementType>
+      <Name>Generic Process</Name>
+      <ID>GE.P</ID>
+      <Description>A representation of a generic process.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>false</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Managed</Value>
+            <Value>Unmanaged</Value>
+            <Value>Not applicable</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>a8ec9076-f3fa-4d6a-8206-801b4bfa0239</Id>
+          <IsInherited>false</IsInherited>
+          <Name>runningAs</Name>
+          <DisplayName>Running As</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Kernel</Value>
+            <Value>System</Value>
+            <Value>Network Service</Value>
+            <Value>Local Service</Value>
+            <Value>Administrator</Value>
+            <Value>Standard User With Elevation</Value>
+            <Value>Standard User Without Elevation</Value>
+            <Value>Windows Store App</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>f370440b-4cc1-4d95-88a0-f8248eff55a8</Id>
+          <IsInherited>false</IsInherited>
+          <Name>Isolation</Name>
+          <DisplayName>Isolation Level</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>AppContainer</Value>
+            <Value>Low Integrity Level</Value>
+            <Value>Microsoft Office Isolated Conversion Environment (MOICE)</Value>
+            <Value>Sandbox</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>75ec7d74-a511-4740-90f5-2a598dc83814</Id>
+          <IsInherited>false</IsInherited>
+          <Name>acceptsInputFrom</Name>
+          <DisplayName>Accepts Input From</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Any Remote User or Entity</Value>
+            <Value>Kernel, System, or Local Admin</Value>
+            <Value>Local or Network Service</Value>
+            <Value>Local Standard User With Elevation</Value>
+            <Value>Local Standard User Without Elevation</Value>
+            <Value>Windows Store Apps or App Container Processes</Value>
+            <Value>Nothing</Value>
+            <Value>Other</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>6e126a16-dabb-41af-b640-7393c5664a2d</Id>
+          <IsInherited>false</IsInherited>
+          <Name>implementsAuthenticationScheme</Name>
+          <DisplayName>Implements or Uses an Authentication Mechanism</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>38383466-86b5-4cd3-b1fb-9eb6d59e74d0</Id>
+          <IsInherited>false</IsInherited>
+          <Name>implementsCustomAuthorizationMechanism</Name>
+          <DisplayName>Implements or Uses an Authorization Mechanism</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>4433a152-063f-4aed-b54a-11c6e29b7ee8</Id>
+          <IsInherited>false</IsInherited>
+          <Name>implementsCommunicationProtocol</Name>
+          <DisplayName>Implements or Uses a Communication Protocol</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>bd054975-9d89-4e46-9762-904e2e261aaa</Id>
+          <IsInherited>false</IsInherited>
+          <Name>hasInputSanitizers</Name>
+          <DisplayName>Sanitizes Input</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>0352ef58-9192-4f20-a6ac-81ccb45b3ac2</Id>
+          <IsInherited>false</IsInherited>
+          <Name>hasOutputSanitizers</Name>
+          <DisplayName>Sanitizes Output</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Generic Physical Medical Component</Name>
+      <ID>b7e00c0e-9a91-4c66-a122-d40509745d71</ID>
+      <Description>A representation of a generic medical component.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>e949fb8c-625c-49ee-a997-a9b3661c119e</Id>
+          <IsInherited>false</IsInherited>
+          <Name>01e68c6d-a550-48d0-b135-d8a138fc3eef</Name>
+          <DisplayName>Authenticates source of incoming data</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>7ba6e8a4-21fe-42bd-ab65-bdea7b0e6708</Id>
+          <IsInherited>false</IsInherited>
+          <Name>8273e7f3-a478-4dd6-bac9-8cef1075de39</Name>
+          <DisplayName>Authenticates destination of outgoing data</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>d8b5239f-3c74-4c93-a796-ebbddfb63030</Id>
+          <IsInherited>false</IsInherited>
+          <Name>ab62a54e-b678-42a7-87c2-79c9bc69024b</Name>
+          <DisplayName>Checks code and configuration signatures</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Generic External Interactor</Name>
+      <ID>GE.EI</ID>
+      <Description>A representation of an external interactor.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Rectangle</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Lower right of stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>612d2805-2ebb-4374-a727-b9735c2042e2</Id>
+          <IsInherited>false</IsInherited>
+          <Name>authenticatesItself</Name>
+          <DisplayName>Authenticates Itself</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Applicable</Value>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Generic Data Store</Name>
+      <ID>GE.DS</ID>
+      <Description>A representation of a data store.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>ParallelLines</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Lower right of stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>720b00c5-e804-42af-b96f-cf26a624ceb1</Id>
+          <IsInherited>false</IsInherited>
+          <Name>storesCredentials</Name>
+          <DisplayName>Stores Credentials</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>a4a4de70-cdee-499e-875c-3c75de4e9662</Id>
+          <IsInherited>false</IsInherited>
+          <Name>storesLogData</Name>
+          <DisplayName>Stores Log Data</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>d8863d2b-3120-41b5-9371-7a96535ed299</Id>
+          <IsInherited>false</IsInherited>
+          <Name>Encrypted</Name>
+          <DisplayName>Encrypted</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>a777e547-d2a7-4a2d-806a-4a5897033b6b</Id>
+          <IsInherited>false</IsInherited>
+          <Name>Signed</Name>
+          <DisplayName>Signed</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>d0d2e48c-2673-485e-a63b-6526423a453f</Id>
+          <IsInherited>false</IsInherited>
+          <Name>AccessType</Name>
+          <DisplayName>Write Access</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>f8cc3c21-2e9c-4934-8765-dc5edd750cd0</Id>
+          <IsInherited>false</IsInherited>
+          <Name>RemoveableStorage</Name>
+          <DisplayName>Removable Storage</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>1af748c4-85a8-4cc3-bb5e-1a904848ec32</Id>
+          <IsInherited>false</IsInherited>
+          <Name>Backup</Name>
+          <DisplayName>Backup</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>64210d69-4ecd-4c95-85dc-430643a49955</Id>
+          <IsInherited>false</IsInherited>
+          <Name>shared</Name>
+          <DisplayName>Shared</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>410d2cd6-bb9b-4879-8f7b-2eb8b4f81278</Id>
+          <IsInherited>false</IsInherited>
+          <Name>storeType</Name>
+          <DisplayName>Store Type</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>SQL Relational Database</Value>
+            <Value>Non Relational Database</Value>
+            <Value>File System</Value>
+            <Value>Registry</Value>
+            <Value>Configuration</Value>
+            <Value>Cache</Value>
+            <Value>HTML5 Storage</Value>
+            <Value>Cookie</Value>
+            <Value>Device</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>3492dc80-a7a1-42f3-9fb3-4f9805abaa29</Id>
+          <IsInherited>false</IsInherited>
+          <Name>54fc78fd-d8fa-40d0-8d1b-e114ba54d573</Name>
+          <DisplayName>Stores Personally Identifiable Information or PHI</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Generic Data Flow</Name>
+      <ID>GE.DF</ID>
+      <Description>A unidirectional representation of the flow of data between elements.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Line</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Before label</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>0d26461e-af56-4bfc-8818-008c3e9b553b</Id>
+          <IsInherited>false</IsInherited>
+          <Name>channel</Name>
+          <DisplayName>Physical Network</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Wire</Value>
+            <Value>Wi-Fi</Value>
+            <Value>Bluetooth</Value>
+            <Value>2G-4G</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>acf22ea0-2787-483b-990c-d33b49a7462a</Id>
+          <IsInherited>false</IsInherited>
+          <Name>authenticatesSource</Name>
+          <DisplayName>Source Authenticated</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>652420e4-3fa3-4919-9fd5-7e6857e158cd</Id>
+          <IsInherited>false</IsInherited>
+          <Name>authenticatesDestination</Name>
+          <DisplayName>Destination Authenticated</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>d0761239-e412-4135-bd66-91d8ed0039a9</Id>
+          <IsInherited>false</IsInherited>
+          <Name>providesConfidentiality</Name>
+          <DisplayName>Provides Confidentiality</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>916aae7a-7a45-4b22-b7dc-0b1ca8c49e60</Id>
+          <IsInherited>false</IsInherited>
+          <Name>providesIntegrity</Name>
+          <DisplayName>Provides Integrity</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>9ca517b9-0814-43ef-aed4-23ffd2e587b0</Id>
+          <IsInherited>false</IsInherited>
+          <Name>XMLenc</Name>
+          <DisplayName>Transmits XML</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>2b54491e-629d-4f4b-afa3-3b29bf296efc</Id>
+          <IsInherited>false</IsInherited>
+          <Name>Cookies</Name>
+          <DisplayName>Contains Cookies</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>f459444d-07c8-49b7-801f-7bfa68904fb6</Id>
+          <IsInherited>false</IsInherited>
+          <Name>SOAP</Name>
+          <DisplayName>SOAP Payload</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>d76ea876-3799-4ad9-b797-faa778177686</Id>
+          <IsInherited>false</IsInherited>
+          <Name>REST</Name>
+          <DisplayName>REST Payload</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>44862cda-c7c5-4d50-877d-266caf1774bd</Id>
+          <IsInherited>false</IsInherited>
+          <Name>RSS</Name>
+          <DisplayName>RSS Payload</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>62a450c0-7640-4661-879d-fcca019a25ed</Id>
+          <IsInherited>false</IsInherited>
+          <Name>JSON</Name>
+          <DisplayName>JSON Payload</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>ba922da7-a834-4034-a83e-24eefdcef5ee</Id>
+          <IsInherited>false</IsInherited>
+          <Name>54851a3b-65da-4902-b4e0-94ef015be735</Name>
+          <DisplayName>Forgery Protection</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>ValidateAntiForgeryTokenAttribute</Value>
+            <Value>ViewStateUserKey</Value>
+            <Value>Nonce</Value>
+            <Value>Other dynamic canary</Value>
+            <Value>Static header not available to the browser</Value>
+            <Value>Other</Value>
+            <Value>None</Value>
+            <Value>Not applicable because the request does not change data</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>770454d0-26d5-455b-97ab-df3a7de90481</Id>
+          <IsInherited>false</IsInherited>
+          <Name>5134edab-0754-4f38-a1f6-d588015571e0</Name>
+          <DisplayName>Transmits Personally Identifiable Information or PHI</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Generic Trust Line Boundary</Name>
+      <ID>GE.TB.L</ID>
+      <Description>An arc representation of a trust boundary.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>LineBoundary</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Before label</ImageLocation>
+      <Attributes />
+    </ElementType>
+    <ElementType>
+      <Name>Generic Trust Border Boundary</Name>
+      <ID>GE.TB.B</ID>
+      <Description>A border representation of a trust boundary.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>BorderBoundary</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Before label</ImageLocation>
+      <Attributes />
+    </ElementType>
+    <ElementType>
+      <Name>Free Text Annotation</Name>
+      <ID>GE.A</ID>
+      <Description>A representation of an annotation.</Description>
+      <ParentElement>ROOT</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Annotation</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <Attributes />
+    </ElementType>
+  </GenericElements>
+  <StandardElements>
+    <ElementType>
+      <Name>OS Process</Name>
+      <ID>SE.P.TMCore.OSProcess</ID>
+      <Description>A Windows Process.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes />
+    </ElementType>
+    <ElementType>
+      <Name>Thread</Name>
+      <ID>SE.P.TMCore.Thread</ID>
+      <Description>A thread of execution in a Windows process.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes />
+    </ElementType>
+    <ElementType>
+      <Name>Kernel Thread</Name>
+      <ID>SE.P.TMCore.KernelThread</ID>
+      <Description>A thread of execution in the Windows kernel.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Unmanaged</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Native Application</Name>
+      <ID>SE.P.TMCore.WinApp</ID>
+      <Description>A representation of a Win32 or Win64 application.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Unmanaged</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Managed Application</Name>
+      <ID>SE.P.TMCore.NetApp</ID>
+      <Description>A representation of a .NET Web application.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Managed</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Thick Client</Name>
+      <ID>SE.P.TMCore.ThickClient</ID>
+      <Description>A representation of a thick client.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Unmanaged</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Browser Client</Name>
+      <ID>SE.P.TMCore.BrowserClient</ID>
+      <Description>A representation of a browser client.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Unmanaged</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Browser and ActiveX Plugins</Name>
+      <ID>SE.P.TMCore.PlugIn</ID>
+      <Description>A representation of an browser plugin.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>1727e90d-0cb5-4da4-8c92-973794e7bbf9</Id>
+          <IsInherited>false</IsInherited>
+          <Name>ActiveX</Name>
+          <DisplayName>ActiveX</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>b731216f-ef31-4b5a-aeb8-a682854ecc03</Id>
+          <IsInherited>false</IsInherited>
+          <Name>BHO</Name>
+          <DisplayName>Brower Plug-in Object (BHO)</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>No</Value>
+            <Value>Yes</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Web Server</Name>
+      <ID>SE.P.TMCore.WebServer</ID>
+      <Description>A representation of an Web Server Process.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>002864b3-9a4e-4d21-8a4d-8aea1d2e3056</Id>
+          <IsInherited>true</IsInherited>
+          <Name>codeType</Name>
+          <DisplayName>Code Type</DisplayName>
+          <Mode>Static</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Managed</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+    <ElementType>
+      <Name>Windows Store Process</Name>
+      <ID>SE.P.TMCore.Modern</ID>
+      <Description>A representation of a Windows Store process.</Description>
+      <ParentElement>GE.P</ParentElement>
+      <Hidden>false</Hidden>
+      <Representation>Ellipse</Representation>
+      <StrokeThickness>0</StrokeThickness>
+      <ImageLocation>Centered on stencil</ImageLocation>
+      <Attributes>
+        <Attribute>
+          <Id>05220cb1-5cbb-4a3b-a9f2-fc986ecb6550</Id>
+          <IsInherited>false</IsInherited>
+          <Name>context</Name>
+          <DisplayName>Context</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Local</Value>
+            <Value>Web</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>69073840-e762-4fce-ae0b-8d66d990b32a</Id>
+          <IsInherited>false</IsInherited>
+          <Name>documentsLibrary</Name>
+          <DisplayName>Documents Library capability</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>5c6bd327-e5e8-4fc1-b1e4-3f4ec4a7112b</Id>
+          <IsInherited>false</IsInherited>
+          <Name>enterprizeAuthentication</Name>
+          <DisplayName>Enterprise Authentication capability</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+        <Attribute>
+          <Id>61586713-3b0c-4704-b236-597cdeb70cda</Id>
+          <IsInherited>false</IsInherited>
+          <Name>internetClientServer</Name>
+          <DisplayName>Internet (Client &amp; Server) capability</DisplayName>
+          <Mode>Dynamic</Mode>
+          <Type>List</Type>
+          <Inheritance>Virtual</Inheritance>
+          <AttributeValues>
+            <Value>Not Selected</Value>
+            <Value>Yes</Value>
+            <Value>No</Value>
+          </AttributeValues>
+        </Attribute>
+      </Attributes>
+    </ElementType>
+  </StandardElements>
+</KnowledgeBase>
